@@ -1,6 +1,7 @@
 // dennis dayan
 function datecalc(){
   var day = new Date(document.getElementById("datepicker").value );
+  var dayStr = day.toDateString();
   var firstDay =  new Date("09/8/2020");
   var numDays = (day.getTime()-firstDay.getTime())/(1000 * 60 * 60 * 24)
   var mlkDay = new Date("1/18/2021");
@@ -11,7 +12,7 @@ function datecalc(){
         var result =  day.toDateString()+": A day."
       }
       else{
-        var result = day.toDateString()+":  B Day!"
+        var result = day.toDateString()+":  B day."
       }
   }
   if (mlkDay.getTime()<day.getTime() && presDay.getTime()>day.getTime()){
@@ -19,7 +20,7 @@ function datecalc(){
       var result =  day.toDateString()+": A day."
     }
     else{
-      var result = day.toDateString()+":  B Day!"
+      var result = day.toDateString()+":  B day."
     }
   }
   if (presDay.getTime()<day.getTime() && memDay.getTime()>day.getTime()){
@@ -27,7 +28,7 @@ function datecalc(){
         var result =  day.toDateString()+": A day."
     }
     else{
-        var result = day.toDateString()+":  B Day!"
+        var result = day.toDateString()+":  B day."
     }
   }
   if (memDay.getTime()<day.getTime()){
@@ -35,8 +36,11 @@ function datecalc(){
       var result =  day.toDateString()+": A day."
     }
     else{
-      var result = day.toDateString()+":  B Day!"
+      var result = day.toDateString()+":  B day."
     }
+  }
+  if (dayStr.includes("Jun 22")){
+    var result = "Graduation Day/Last Day of School: A day."
   }
   if(result == null){
     var result = "Invalid Date"
