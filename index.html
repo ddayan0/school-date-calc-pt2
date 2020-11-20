@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>School Date Calculator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- BELOW IS JQUERY CODE -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $( function() {
+		$( "#datepicker" ).datepicker({ minDate: new Date(2020, 8, 8), maxDate: new Date(2020, 17, 22), beforeShowDay: $.datepicker.noWeekends });
+	} );
+  </script>
+    <!-- END JQUERY CODE -->
+  </head>
+  <body>
+    <h1 class="title">School Day Calculator</h1>
+    <h3 class="daynumber">Enter date using the dropdown below</h3>
+    <h3 class="daynumber">Any date that is not selectable and is not a weekend, it is summer break</h3>
+    <center><input type="text" id="datepicker"></p></center>
+    <center><button onclick="datecalc()">Calculate</button></center>
+    <br>
+    <center><div id="result"></div></center>
+    <script src="script.js"></script>
+  </body>
+</html>

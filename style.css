@@ -1,0 +1,17 @@
+body {
+  background-color: wheat;
+}
+.title {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.daynumber {
+  font-size: small;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+button {
+  color: maroon;
+  font-weight: bolder;
+  border-radius: 25px;
+}
