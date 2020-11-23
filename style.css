@@ -15,3 +15,7 @@ button {
   font-weight: bolder;
   border-radius: 25px;
 }
+img {
+    width: 10%; 
+    height: auto;
+}

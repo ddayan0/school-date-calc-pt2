@@ -1,7 +1,7 @@
 // dennis dayan
 function datecalc(){
   var day = new Date(document.getElementById("datepicker").value + " 00:00");
-  var dayStr = day.toDateString();
+  var dayStr = day.toString();
   var firstDay =  new Date("09/8/2020");
   var numDays = (day.getTime()-firstDay.getTime())/(1000 * 60 * 60 * 24)
   var mlkDay = new Date("1/18/2021");
@@ -40,11 +40,13 @@ function datecalc(){
       var result = day.toDateString()+":  B day."
     }
   }
-  else if (dayStr.includes("Jun 22")){
-    var result = "Graduation Day/Last Day of School: A day."
-  }
   else if(result == null){
     var result = "Invalid Date"
+  }
+  if(dayStr.includes("Jun 22")){
+    if(result == "Tue Jun 22 2021: A day."){
+      var result = "Graduation Day"
+    }
   }
   document.getElementById("result").innerHTML = (result)
 }
