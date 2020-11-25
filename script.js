@@ -7,6 +7,9 @@ function datecalc(){
   var mlkDay = new Date("1/18/2021");
   var presDay = new Date("02/15/2021");
   var memDay = new Date("05/31/21");
+  // have to use parseInt or else JS is broken
+  // odd problem that only manifested recently
+  // it works, have no reason to change it
   if (mlkDay.getTime()>day.getTime()){
       if (parseInt(numDays % 2) == 0){
         var result =  day.toDateString()+": A day."
@@ -43,6 +46,9 @@ function datecalc(){
   else if(result == null){
     var result = "Invalid Date"
   }
+  // dont tell me how this works
+  // dont tell me why this works
+  // this works and I do not care
   if(dayStr.includes("Jun 22")){
     if(result == "Tue Jun 22 2021: A day."){
       var result = "Graduation Day"
